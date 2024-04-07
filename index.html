@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <h1>Blog Your Day</h1>
+</header>
+
+<!-- Unique subtitle below the header -->
+<div class="unique-subtitle">
+    <h2>Hey Everyone!</h2>
+</div>
+
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Write Post</a>
+</nav>
+
+<div class="container">
+    <form id="blogForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Enter title" required>
+        
+        <label for="author">Your Name:</label>
+        <input type="text" id="author" name="author" placeholder="Enter your name" required>
+        
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" rows="8" placeholder="Write your post content" required></textarea>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Subtitle -->
+    <h2 class="subtitle">About My Day</h2>
+    
+    <div id="blogPosts">
+        <!-- Blog posts will be displayed here -->
+    </div>
+</div>
+
+<!-- Add modal dialog for user information -->
+<div id="userModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Welcome!</h2>
+        <p>Please provide your username and profile picture:</p>
+        <form id="userInfoForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="profilePic">Profile Picture URL:</label>
+            <input type="text" id="profilePic" name="profilePic">
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</div>
+
+<!-- Add file input for profile picture selection -->
+<label for="profilePicUpload">Choose Profile Picture:</label>
+<input type="file" id="profilePicUpload" name="profilePicUpload" accept="image/*">
+<div id="profilePicPreview"></div>
+
+<div class="image-row">
+    <img src="1712410995391.jpg" alt="Image 1">
+    <img src="1712410995403.jpg" alt="Image 2">
+    <img src=".\Desktop\1712410995414.jpg" alt="Image 3">
+</div>
+
+
+<script src="scripts.js"></script>
+    
+</body>
+</html>
